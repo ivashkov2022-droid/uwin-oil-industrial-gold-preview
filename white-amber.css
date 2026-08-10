@@ -1507,17 +1507,16 @@ h2 {
 @media (min-width: 981px) {
   .hero-visual,
   .equipment-image {
-    background:
-      radial-gradient(circle at 0 0, rgba(213, 162, 62, .2), transparent 54%),
-      radial-gradient(circle at 100% 100%, rgba(213, 162, 62, .08), transparent 58%);
-    border: 0;
-    border-radius: 0;
+    background: #fff;
+    border: 1px solid #e9e2d7;
+    border-radius: 2px;
   }
 
   .machine-frame {
     border: 0;
     border-radius: 0;
-    box-shadow: 0 18px 50px rgba(55, 43, 27, .055);
+    box-shadow: none;
+    transform: none;
   }
 
   .machine-frame::after {
@@ -1530,8 +1529,7 @@ h2 {
   .machine-frame img,
   .equipment-image img {
     border-radius: 0;
-    outline: 1px solid rgba(213, 162, 62, .34);
-    outline-offset: -1px;
+    outline: 0;
   }
 }
 
