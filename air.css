@@ -1,0 +1,1136 @@
+/*
+ * UWIN OIL — light / air concept.
+ * This layer deliberately keeps the semantic structure and technical diagrams
+ * from the dark industrial concept while giving the page a separate visual voice.
+ */
+
+:root {
+  --navy-950: #173947;
+  --navy-900: #214a5c;
+  --navy-850: #2a596b;
+  --navy-800: #335f70;
+  --blue-700: #326d83;
+  --cyan-500: #69cad4;
+  --cyan-300: #a9e7ea;
+  --cyan-100: #e6f7f8;
+  --oil-500: #e9a642;
+  --oil-200: #fae6bf;
+  --ink: #294554;
+  --muted: #66808e;
+  --line: #cddbe3;
+  --surface: #eaf2f9;
+  --white: #ffffff;
+  --orange: #ff5a00;
+  --orange-dark: #dc5005;
+  --ice: #dce5ed;
+  --shadow: 0 24px 70px rgba(41, 69, 84, .11);
+  --radius-lg: 38px;
+  --radius-md: 26px;
+  --radius-sm: 16px;
+  --container: 1320px;
+}
+
+body {
+  color: var(--ink);
+  background: var(--surface);
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -.045em;
+}
+
+h2 {
+  font-size: clamp(42px, 5.25vw, 72px);
+  font-weight: 620;
+}
+
+.container {
+  width: min(calc(100% - 56px), var(--container));
+}
+
+.section {
+  padding: clamp(120px, 12vw, 184px) 0;
+}
+
+.eyebrow,
+.eyebrow-light {
+  color: #4c6877;
+  font-size: 11px;
+  letter-spacing: .15em;
+}
+
+.eyebrow > span {
+  width: 26px;
+  background: var(--orange);
+}
+
+.button {
+  min-height: 57px;
+  padding: 15px 25px;
+  border-radius: 999px;
+  font-size: 14px;
+  letter-spacing: -.01em;
+}
+
+.button-primary {
+  color: #fff;
+  background: var(--orange);
+  box-shadow: none;
+}
+
+.button-primary:hover {
+  color: #fff;
+  background: var(--orange-dark);
+  box-shadow: 0 16px 36px rgba(220, 80, 5, .2);
+}
+
+.button-dark {
+  color: #fff;
+  background: var(--ink);
+}
+
+.button-dark:hover {
+  background: #173947;
+}
+
+.button-ghost {
+  color: var(--ink);
+  border-color: rgba(41, 69, 84, .28);
+}
+
+.button-ghost:hover {
+  color: var(--ink);
+  background: rgba(255, 255, 255, .55);
+  border-color: rgba(41, 69, 84, .42);
+}
+
+.site-header {
+  top: 14px;
+  width: min(calc(100% - 32px), 1380px);
+  margin-inline: auto;
+  color: var(--ink);
+  background: rgba(247, 251, 253, .88);
+  border: 1px solid rgba(118, 142, 156, .22);
+  border-radius: 999px;
+  box-shadow: 0 8px 30px rgba(41, 69, 84, .05);
+  backdrop-filter: blur(18px);
+}
+
+.site-header.scrolled {
+  background: rgba(255, 255, 255, .94);
+  border-color: rgba(118, 142, 156, .28);
+  box-shadow: 0 12px 34px rgba(41, 69, 84, .1);
+}
+
+.header-inner {
+  min-height: 70px;
+}
+
+.brand,
+.site-nav a {
+  color: var(--ink);
+}
+
+.brand-mark {
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(41, 69, 84, .14);
+  box-shadow: none;
+}
+
+.brand-copy strong {
+  font-size: 19px;
+}
+
+.brand-copy small {
+  color: #768e9c;
+}
+
+.site-nav {
+  gap: clamp(18px, 2.4vw, 34px);
+}
+
+.site-nav a {
+  color: #4f6572;
+  font-size: 13px;
+}
+
+.site-nav a:hover {
+  color: var(--orange-dark);
+}
+
+.site-nav a::after {
+  background: var(--orange);
+}
+
+.button-header {
+  min-height: 42px;
+  padding: 10px 18px;
+  color: #fff;
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+/* Hero: a single calm editorial field rather than a heavy dark cover. */
+.hero {
+  min-height: auto;
+  padding: 118px 0 30px;
+  color: var(--ink);
+  background: var(--surface);
+}
+
+.hero::before,
+.hero-grid-lines,
+.hero-orbit {
+  display: none;
+}
+
+.hero-layout {
+  position: relative;
+  min-height: 780px;
+  align-items: stretch;
+  padding: clamp(38px, 5vw, 68px);
+  overflow: hidden;
+  background: var(--ice);
+  border: 1px solid rgba(118, 142, 156, .16);
+  border-radius: 42px;
+  grid-template-columns: minmax(0, 1.16fr) minmax(400px, .84fr);
+  gap: clamp(30px, 4.2vw, 62px);
+}
+
+.hero-layout::before {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  right: -190px;
+  bottom: -220px;
+  background: rgba(255, 255, 255, .34);
+  border-radius: 50%;
+  content: "";
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  padding-top: 14px;
+}
+
+.hero-copy h1 {
+  max-width: 760px;
+  margin-bottom: 30px;
+  color: var(--ink);
+  font-size: clamp(50px, 5vw, 72px);
+  font-weight: 590;
+  line-height: .99;
+}
+
+.hero-copy h1 em {
+  color: var(--orange);
+  font-style: normal;
+}
+
+.hero-lead {
+  max-width: 690px;
+  color: #4c6877;
+  font-size: clamp(17px, 1.5vw, 21px);
+  line-height: 1.52;
+}
+
+.hero-actions {
+  margin-bottom: 44px;
+}
+
+.hero-proof {
+  margin-top: auto;
+  border-top-color: rgba(41, 69, 84, .18);
+}
+
+.hero-proof > div {
+  padding-top: 18px;
+  border-right-color: rgba(41, 69, 84, .14);
+}
+
+.hero-proof strong {
+  color: var(--ink);
+  font-size: 22px;
+  font-weight: 650;
+}
+
+.hero-proof span {
+  color: #66808e;
+}
+
+.hero-visual {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+
+.machine-frame {
+  height: 100%;
+  min-height: 640px;
+  padding: 0;
+  overflow: hidden;
+  background: #f8fbfc;
+  border: 0;
+  border-radius: 31px;
+  box-shadow: 0 25px 70px rgba(41, 69, 84, .12);
+}
+
+.machine-frame::after {
+  background: linear-gradient(180deg, transparent 58%, rgba(23, 57, 71, .26));
+}
+
+.machine-frame img {
+  height: 100%;
+  min-height: 640px;
+  object-fit: cover;
+  object-position: 54% center;
+  filter: saturate(.86) contrast(.97);
+}
+
+.machine-status {
+  top: 20px;
+  left: 20px;
+  color: var(--ink);
+  background: rgba(255, 255, 255, .9);
+  border-color: rgba(41, 69, 84, .14);
+  box-shadow: 0 8px 24px rgba(41, 69, 84, .1);
+}
+
+.machine-status span {
+  background: var(--orange);
+  box-shadow: 0 0 0 5px rgba(255, 90, 0, .12);
+}
+
+.machine-note {
+  color: #fff;
+  background: rgba(41, 69, 84, .86);
+  border-color: rgba(255, 255, 255, .2);
+}
+
+.machine-note small {
+  color: #dce5ed;
+}
+
+.hero-footnote {
+  position: static;
+  padding: 14px 8px 0;
+  color: #768e9c;
+}
+
+.section-heading {
+  max-width: 1080px;
+  margin-bottom: clamp(58px, 7vw, 94px);
+}
+
+.section-heading > p:last-child {
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.split-heading {
+  grid-template-columns: 1.2fr .8fr;
+  gap: clamp(40px, 8vw, 112px);
+}
+
+/* Outcomes: two clean editorial cards with generous breathing room. */
+.section-intro {
+  background: var(--surface);
+}
+
+.outcome-grid {
+  gap: 22px;
+}
+
+.outcome-card {
+  min-height: 730px;
+  padding: clamp(28px, 4vw, 52px);
+  background: rgba(255, 255, 255, .78);
+  border: 1px solid rgba(118, 142, 156, .2);
+  border-radius: 34px;
+  box-shadow: none;
+}
+
+.card-index {
+  color: #768e9c;
+}
+
+.outcome-graphic {
+  height: 250px;
+  margin: 24px 0 46px;
+  border-radius: 25px;
+}
+
+.outcome-card h3 {
+  font-size: clamp(29px, 2.7vw, 40px);
+  font-weight: 610;
+}
+
+.outcome-card > p:not(.card-kicker) {
+  color: #66808e;
+}
+
+.card-kicker,
+.check-list li::before {
+  color: var(--ink);
+}
+
+.card-kicker {
+  color: var(--orange-dark);
+}
+
+.check-list li {
+  color: #405d6c;
+}
+
+.check-list li::before {
+  background: var(--oil-200);
+}
+
+.statement {
+  margin-top: 22px;
+  padding: clamp(34px, 5vw, 66px);
+  background: var(--ink);
+  border: 0;
+  border-radius: 34px;
+}
+
+.statement span {
+  color: var(--oil-500);
+}
+
+.statement p {
+  color: #dce5ed;
+}
+
+.statement strong {
+  color: #fff;
+}
+
+/* Comparison is one dark technical island, not an entire dark page. */
+.comparison {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background: var(--surface);
+}
+
+.comparison > .container {
+  padding: clamp(34px, 5vw, 72px);
+  color: #fff;
+  background: var(--ink);
+  border-radius: 42px;
+}
+
+.section-heading-dark h2 {
+  color: #fff;
+}
+
+.section-heading-dark > p:last-child {
+  color: #b6c7d0;
+}
+
+.comparison .eyebrow-light {
+  color: #b6c7d0;
+}
+
+.compare-visuals {
+  margin-bottom: 22px;
+  background: rgba(255, 255, 255, .035);
+  border: 1px solid rgba(255, 255, 255, .09);
+  border-radius: 28px;
+}
+
+.versus {
+  color: var(--ink);
+  background: var(--oil-500);
+  box-shadow: 0 0 0 12px rgba(233, 166, 66, .09);
+}
+
+.comparison-table-wrap {
+  border-color: rgba(255, 255, 255, .13);
+  border-radius: 26px;
+}
+
+.comparison-table td:nth-child(3) {
+  background: rgba(105, 202, 212, .055);
+}
+
+.compare-cta {
+  background: rgba(255, 255, 255, .06);
+  border-radius: 20px;
+}
+
+/* Scientific explanation: bright copy beside a precise dark diagram. */
+.mass-transfer {
+  background: #f8fbfc;
+}
+
+.mass-layout {
+  gap: clamp(60px, 8vw, 118px);
+}
+
+.mass-copy h2 {
+  font-size: clamp(44px, 5vw, 68px);
+  font-weight: 610;
+}
+
+.process-list li {
+  padding: 24px 0;
+  border-color: #dce5ed;
+}
+
+.process-list li > span {
+  color: var(--orange-dark);
+}
+
+.mass-diagram {
+  background: #214a5c;
+  border: 0;
+  border-radius: 34px;
+  box-shadow: 0 28px 70px rgba(41, 69, 84, .16);
+}
+
+.diagram-head,
+.diagram-result {
+  background: #173947;
+}
+
+.diagram-result strong {
+  background: var(--oil-500);
+}
+
+/* Application route: a wide, calm card with a strict six-column rhythm. */
+.lifecycle {
+  background: var(--surface);
+}
+
+.lifecycle .section-heading {
+  margin-bottom: 70px;
+}
+
+.route {
+  padding: 34px 16px 40px;
+  background: rgba(255, 255, 255, .75);
+  border: 1px solid rgba(118, 142, 156, .18);
+  border-radius: 34px;
+}
+
+.route-line {
+  top: 87px;
+  right: 8%;
+  left: 8%;
+  background: #cbd8df;
+}
+
+.route-line span {
+  background: var(--orange);
+}
+
+.route-num {
+  margin-top: 40px;
+  color: var(--ink);
+  background: #f8fbfc;
+  border-color: #c5d4dc;
+}
+
+.route article:nth-child(-n+4) .route-num {
+  color: #fff;
+  background: var(--orange);
+  border-color: var(--orange);
+}
+
+.route-icon {
+  background: #f8fbfc;
+  border-color: #d7e2e8;
+  box-shadow: none;
+}
+
+.route h3 {
+  font-size: 17px;
+}
+
+.application-strip {
+  margin-top: 28px;
+  padding-top: 0;
+  border: 0;
+}
+
+.application-strip span {
+  color: #4c6877;
+  background: rgba(255, 255, 255, .62);
+  border-color: #d7e2e8;
+}
+
+/* Equipment becomes a full editorial image panel. */
+.equipment {
+  background: #f8fbfc;
+}
+
+.equipment-layout {
+  align-items: stretch;
+  grid-template-columns: 1.08fr .92fr;
+  gap: 22px;
+}
+
+.equipment-image {
+  min-height: 720px;
+  padding: 0;
+  background: #fff;
+  border: 0;
+  border-radius: 36px;
+  box-shadow: none;
+}
+
+.equipment-image img {
+  height: 100%;
+  aspect-ratio: auto;
+  object-position: 54% center;
+  border-radius: 36px;
+}
+
+.image-caption {
+  right: 26px;
+  bottom: 26px;
+  color: var(--ink);
+  background: rgba(255, 255, 255, .9);
+  border-color: rgba(41, 69, 84, .16);
+}
+
+.image-caption span {
+  color: #66808e;
+}
+
+.equipment-copy {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(38px, 5vw, 66px);
+  background: var(--surface);
+  border: 1px solid rgba(118, 142, 156, .16);
+  border-radius: 36px;
+}
+
+.equipment-copy h2 {
+  font-size: clamp(42px, 4.6vw, 64px);
+  font-weight: 610;
+}
+
+.feature-grid {
+  margin-top: auto;
+  border-color: #cddbe3;
+}
+
+.feature-grid > div {
+  border-color: #cddbe3;
+}
+
+.feature-grid span {
+  color: var(--orange-dark);
+}
+
+/* Economics: pale orange/blue cards instead of a heavy dark belt. */
+.economics {
+  padding: 92px 0 50px;
+  color: var(--ink);
+  background: var(--surface);
+}
+
+.economics-grid {
+  gap: 16px;
+}
+
+.economics-title {
+  padding: 38px 44px;
+  background: #dce5ed;
+  border-radius: 30px;
+}
+
+.economics-title h2 {
+  font-size: clamp(36px, 3.9vw, 52px);
+}
+
+.economics-title > p:last-child {
+  color: #58717f;
+}
+
+.metric-card {
+  min-height: 310px;
+  color: var(--ink);
+  background: rgba(255, 255, 255, .76);
+  border-color: rgba(118, 142, 156, .18);
+  border-radius: 28px;
+}
+
+.metric-card small,
+.metric-card span {
+  color: #66808e;
+}
+
+.metric-card strong {
+  color: var(--ink);
+}
+
+.metric-card:nth-of-type(2) {
+  background: #f6e8d2;
+}
+
+.metric-card-accent {
+  color: #fff;
+  background: var(--orange);
+  border-color: var(--orange);
+}
+
+.metric-card-accent small,
+.metric-card-accent span,
+.metric-card-accent strong {
+  color: #fff;
+}
+
+.economics-note {
+  color: #768e9c;
+}
+
+/* Process and test: strict modularity, no decorative tilting. */
+.project-process {
+  background: var(--surface);
+}
+
+.steps {
+  gap: 12px;
+  overflow: visible;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+.steps article {
+  min-height: 260px;
+  padding: 32px;
+  background: rgba(255, 255, 255, .74);
+  border: 1px solid rgba(118, 142, 156, .18) !important;
+  border-radius: 26px;
+}
+
+.steps span {
+  color: var(--orange-dark);
+}
+
+.steps h3 {
+  margin-top: 60px;
+  font-size: 23px;
+}
+
+.test-section {
+  padding-top: 54px;
+  background: #f8fbfc;
+}
+
+.test-layout {
+  gap: 22px;
+}
+
+.test-photo {
+  min-height: 720px;
+  border-radius: 36px;
+}
+
+.test-copy {
+  padding: clamp(42px, 5vw, 70px);
+  background: var(--surface);
+  border: 1px solid rgba(118, 142, 156, .16);
+  border-radius: 36px;
+}
+
+.test-copy h2 {
+  font-size: clamp(40px, 4.3vw, 58px);
+  font-weight: 610;
+}
+
+.test-list span {
+  color: var(--orange-dark);
+}
+
+/* Service returns to the light world; the final CTA carries the strong contrast. */
+.service {
+  color: var(--ink);
+  background: var(--surface);
+}
+
+.service .section-heading-dark h2 {
+  color: var(--ink);
+}
+
+.service .section-heading-dark > p:last-child,
+.service .eyebrow-light {
+  color: var(--muted);
+}
+
+.service-grid {
+  gap: 12px;
+  border: 0;
+}
+
+.service-grid article {
+  min-height: 270px;
+  padding: 30px;
+  background: rgba(255, 255, 255, .72);
+  border: 1px solid rgba(118, 142, 156, .18);
+  border-radius: 26px;
+}
+
+.service-grid article:hover {
+  background: #fff;
+}
+
+.service-grid article::after {
+  border-color: rgba(255, 90, 0, .14);
+}
+
+.service-grid span {
+  color: var(--orange-dark);
+}
+
+.service-grid h3 {
+  color: var(--ink);
+}
+
+.service-grid p {
+  color: #66808e;
+}
+
+.service-footer {
+  color: #fff;
+  background: var(--ink);
+  border-radius: 24px;
+}
+
+.final-cta {
+  width: min(calc(100% - 28px), 1460px);
+  margin: 0 auto 14px;
+  padding: clamp(80px, 8vw, 120px) 0;
+  color: #fff;
+  background: var(--ink);
+  border-radius: 42px;
+}
+
+.final-grid {
+  display: block;
+  opacity: .08;
+}
+
+.final-layout h2 {
+  font-size: clamp(48px, 6vw, 80px);
+  font-weight: 580;
+}
+
+.final-layout p {
+  color: #bfd0d8;
+}
+
+.final-action span {
+  color: #93aab5;
+}
+
+.site-footer {
+  padding-top: 72px;
+  color: #66808e;
+  background: var(--surface);
+  border-top: 0;
+}
+
+.brand-footer,
+.footer-contact > a {
+  color: var(--ink);
+}
+
+.footer-grid > div:first-child > p,
+.footer-grid nav a {
+  color: #66808e;
+}
+
+.footer-grid nav a:hover,
+.footer-contact button {
+  color: var(--orange-dark);
+}
+
+.footer-contact span,
+.footer-bottom {
+  color: #768e9c;
+}
+
+.footer-bottom {
+  border-top-color: #cddbe3;
+}
+
+.request-dialog {
+  border-radius: 30px;
+  box-shadow: 0 30px 100px rgba(41, 69, 84, .24);
+}
+
+.request-dialog::backdrop {
+  background: rgba(23, 57, 71, .7);
+}
+
+.dialog-head {
+  background: var(--surface);
+}
+
+.request-form input:focus,
+.request-form textarea:focus {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(255, 90, 0, .12);
+}
+
+.form-status {
+  color: var(--ink);
+  background: #f6e8d2;
+}
+
+@media (max-width: 1180px) {
+  .site-nav {
+    gap: 18px;
+  }
+
+  .hero-layout {
+    min-height: 720px;
+    grid-template-columns: minmax(0, 1fr) minmax(370px, .82fr);
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(48px, 6vw, 69px);
+  }
+
+  .machine-frame,
+  .machine-frame img {
+    min-height: 580px;
+  }
+
+  .route {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 48px;
+  }
+
+  .route-line {
+    display: none;
+  }
+
+  .route-num {
+    margin-top: 10px;
+  }
+
+  .economics-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .economics-title {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 980px) {
+  .site-header {
+    top: 8px;
+    width: calc(100% - 16px);
+  }
+
+  .header-inner {
+    min-height: 64px;
+  }
+
+  .menu-toggle span {
+    background: var(--ink);
+  }
+
+  .menu-toggle {
+    background: rgba(41, 69, 84, .06);
+    border-color: rgba(41, 69, 84, .16);
+    border-radius: 50%;
+  }
+
+  .menu-toggle span:not(.sr-only) {
+    background: var(--ink);
+  }
+
+  .site-nav {
+    top: 72px;
+    color: var(--ink);
+    background: rgba(255, 255, 255, .97);
+    border: 1px solid #d7e2e8;
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+  }
+
+  .site-nav a {
+    color: var(--ink);
+    border-bottom-color: #e3ebef;
+  }
+
+  .hero-layout {
+    min-height: 0;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy {
+    min-height: 620px;
+  }
+
+  .machine-frame,
+  .machine-frame img {
+    min-height: 620px;
+  }
+
+  .mass-layout,
+  .equipment-layout,
+  .test-layout,
+  .final-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .equipment-image,
+  .test-photo {
+    min-height: 620px;
+  }
+
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .final-layout {
+    gap: 46px;
+  }
+}
+
+@media (max-width: 740px) {
+  .container {
+    width: min(calc(100% - 28px), var(--container));
+  }
+
+  .section {
+    padding: 92px 0;
+  }
+
+  .hero {
+    padding-top: 88px;
+  }
+
+  .hero-layout {
+    padding: 28px 20px 20px;
+    border-radius: 28px;
+  }
+
+  .hero-copy {
+    min-height: 680px;
+  }
+
+  .hero-copy h1 {
+    overflow-wrap: normal;
+    word-break: normal;
+    font-size: clamp(36px, 9.7vw, 48px);
+  }
+
+  .hero-lead {
+    font-size: 16px;
+  }
+
+  .hero-proof {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-proof > div {
+    padding: 14px 0;
+    border-right: 0;
+    border-bottom: 1px solid rgba(41, 69, 84, .12);
+  }
+
+  .machine-frame,
+  .machine-frame img {
+    min-height: 500px;
+  }
+
+  .machine-note-top {
+    top: auto;
+    right: 14px;
+    bottom: 84px;
+  }
+
+  .machine-note-bottom {
+    right: 14px;
+    bottom: 18px;
+  }
+
+  .split-heading,
+  .outcome-grid,
+  .route,
+  .steps,
+  .economics-grid,
+  .service-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .outcome-card {
+    min-height: 0;
+  }
+
+  .comparison {
+    padding-block: 28px;
+  }
+
+  .comparison > .container {
+    width: calc(100% - 16px);
+    padding: 72px 18px 28px;
+    border-radius: 28px;
+  }
+
+  .compare-visuals {
+    border-radius: 22px;
+  }
+
+  .mass-diagram,
+  .equipment-image,
+  .equipment-copy,
+  .test-photo,
+  .test-copy {
+    border-radius: 27px;
+  }
+
+  .equipment-image,
+  .test-photo {
+    min-height: 500px;
+  }
+
+  .economics-title,
+  .metric-card {
+    border-radius: 25px;
+  }
+
+  .metric-card {
+    min-height: 240px;
+  }
+
+  .service-footer,
+  .final-layout,
+  .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .final-cta {
+    width: calc(100% - 12px);
+    border-radius: 30px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button,
+  .outcome-card,
+  .service-grid article {
+    transition: none;
+  }
+}
