@@ -1529,8 +1529,8 @@ h2 {
     z-index: 5;
     box-sizing: border-box;
     background: none;
-    border-top: 1px solid rgba(101, 125, 128, .52);
-    border-left: 1px solid rgba(101, 125, 128, .52);
+    border-top: 1.5px solid rgba(79, 130, 140, .92);
+    border-left: 1.5px solid rgba(79, 130, 140, .92);
     content: "";
     pointer-events: none;
   }
@@ -1635,8 +1635,8 @@ h2 {
     box-sizing: border-box;
     height: 28px;
     background: none;
-    border-top: 1px solid rgba(101, 125, 128, .48);
-    border-left: 1px solid rgba(101, 125, 128, .48);
+    border-top: 1px solid rgba(79, 130, 140, .86);
+    border-left: 1px solid rgba(79, 130, 140, .86);
     content: "";
     pointer-events: none;
   }
