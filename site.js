@@ -31,6 +31,12 @@
     document.body.classList.toggle("menu-open", willOpen);
   });
 
+  document.addEventListener("click", (event) => {
+    if (!document.body.classList.contains("menu-open")) return;
+    if (mobileMenu?.contains(event.target) || menuToggle?.contains(event.target)) return;
+    closeMobileMenu();
+  });
+
   mobileMenu?.querySelectorAll("a, button").forEach((control) => {
     control.addEventListener("click", closeMobileMenu);
   });

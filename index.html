@@ -79,21 +79,25 @@
 
   <header class="site-header" data-header>
     <nav class="header-inner" aria-label="Основная навигация">
-      <div class="brand-block">
-        <a class="brand-link" href="#main">ГРУППА КОМПАНИЙ "ЮВИН"</a>
-        <a class="brand-contact" href="#contacts">Контакты</a>
+      <div class="header-brand">
+        <a class="header-logo" href="#main" aria-label="Группа компаний «Ювин»">
+          <img src="assets/images/logo.webp" alt="" width="44" height="44">
+        </a>
+        <div class="brand-block">
+          <a class="brand-link" href="#main">ГРУППА КОМПАНИЙ "ЮВИН"</a>
+          <a class="brand-contact" href="#contacts">Контакты</a>
+        </div>
       </div>
       <div class="nav-links">
         <a href="#equipment">Оборудование</a>
         <a href="#services">Услуги</a>
         <a href="#reviews">Отзывы</a>
       </div>
-      <a class="header-logo" href="#main" aria-label="Группа компаний «Ювин»">
-        <img src="assets/images/logo.webp" alt="" width="44" height="44">
-      </a>
-      <a class="header-phone" href="tel:+79230017816">+7 923-001-7816</a>
-      <button class="button button-small" type="button" data-open-dialog="quote-dialog">Заказать звонок</button>
-      <button class="button button-small button-outline" type="button" data-open-dialog="quote-dialog">Получить расчет</button>
+      <div class="header-actions">
+        <a class="header-phone" href="tel:+79230017816">+7 923-001-7816</a>
+        <button class="button button-small" type="button" data-open-dialog="quote-dialog">Заказать звонок</button>
+        <button class="button button-small button-outline" type="button" data-open-dialog="quote-dialog">Получить расчет</button>
+      </div>
     </nav>
   </header>
 
