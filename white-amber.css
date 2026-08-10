@@ -1503,11 +1503,10 @@ h2 {
   }
 }
 
-/* Desktop image framing: preserve geometry and use technical corner marks. */
+/* Desktop image treatment: a single process rail instead of a decorative frame. */
 @media (min-width: 981px) {
   .hero-visual,
   .equipment-image {
-    --frame-mark: rgba(189, 126, 22, .62);
     background: transparent;
     border: 0;
     border-radius: 0;
@@ -1517,18 +1516,53 @@ h2 {
   .equipment-image::after {
     position: absolute;
     z-index: 5;
-    inset: 0;
+    left: 0;
+    width: 13px;
     background:
-      linear-gradient(var(--frame-mark), var(--frame-mark)) left top / 34px 1px no-repeat,
-      linear-gradient(var(--frame-mark), var(--frame-mark)) left top / 1px 34px no-repeat,
-      linear-gradient(var(--frame-mark), var(--frame-mark)) right top / 34px 1px no-repeat,
-      linear-gradient(var(--frame-mark), var(--frame-mark)) right top / 1px 34px no-repeat,
-      linear-gradient(var(--frame-mark), var(--frame-mark)) left bottom / 34px 1px no-repeat,
-      linear-gradient(var(--frame-mark), var(--frame-mark)) left bottom / 1px 34px no-repeat,
-      linear-gradient(var(--frame-mark), var(--frame-mark)) right bottom / 34px 1px no-repeat,
-      linear-gradient(var(--frame-mark), var(--frame-mark)) right bottom / 1px 34px no-repeat;
+      linear-gradient(rgba(111, 174, 188, .82), rgba(111, 174, 188, .82)) 6px 0 / 1px 100% no-repeat,
+      linear-gradient(rgba(189, 126, 22, .82), rgba(189, 126, 22, .82)) left top / 13px 1px no-repeat,
+      linear-gradient(rgba(189, 126, 22, .82), rgba(189, 126, 22, .82)) left center / 10px 1px no-repeat,
+      linear-gradient(rgba(189, 126, 22, .82), rgba(189, 126, 22, .82)) left bottom / 13px 1px no-repeat;
     content: "";
     pointer-events: none;
+  }
+
+  .hero-visual::after {
+    top: 13px;
+    bottom: 13px;
+  }
+
+  .equipment-image::after {
+    top: 11px;
+    bottom: 11px;
+    width: 11px;
+  }
+
+  .hero-visual::before,
+  .equipment-image::before {
+    position: absolute;
+    z-index: 6;
+    top: 50%;
+    left: 1px;
+    padding-block: 7px;
+    color: #5f95a1;
+    background: #fff;
+    content: "";
+    font-size: 7px;
+    font-weight: 750;
+    letter-spacing: .13em;
+    line-height: 1;
+    pointer-events: none;
+    transform: translateY(-50%) rotate(180deg);
+    writing-mode: vertical-rl;
+  }
+
+  .hero-visual::before {
+    content: "N₂ / INLINE";
+  }
+
+  .equipment-image::before {
+    content: "MODULE / 01";
   }
 
   .machine-frame {
