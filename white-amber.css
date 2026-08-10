@@ -1545,6 +1545,12 @@ h2 {
   .equipment-image::after {
     top: 11px;
     bottom: 11px;
+    background:
+      linear-gradient(rgba(111, 174, 188, .82), rgba(111, 174, 188, .82)) right 6px top / 1px 100% no-repeat,
+      linear-gradient(rgba(111, 174, 188, .82), rgba(111, 174, 188, .82)) right 6px top / calc(100% - 6px) 1px no-repeat,
+      linear-gradient(rgba(189, 126, 22, .82), rgba(189, 126, 22, .82)) right top / 13px 1px no-repeat,
+      linear-gradient(rgba(189, 126, 22, .82), rgba(189, 126, 22, .82)) right center / 10px 1px no-repeat,
+      linear-gradient(rgba(189, 126, 22, .82), rgba(189, 126, 22, .82)) right bottom / 13px 1px no-repeat;
   }
 
   .module-plate {
@@ -1569,27 +1575,23 @@ h2 {
     top: 11px;
   }
 
-  .module-plate span {
-    width: 6px;
-    height: 6px;
-    flex: 0 0 auto;
-    background: var(--amber-500);
-    border-radius: 50%;
-    box-shadow: 0 0 0 3px rgba(111, 174, 188, .2);
+  .module-plate strong {
+    color: #4f828c;
+    font-size: 9px;
+    font-weight: 750;
+    letter-spacing: .08em;
   }
 
-  .module-plate strong {
+  .module-plate span {
+    color: #aaa39a;
     font-size: 9px;
-    font-weight: 800;
-    letter-spacing: .15em;
+    font-weight: 500;
   }
 
   .module-plate small {
-    padding-left: 8px;
-    color: #8d867d;
-    border-left: 1px solid #ded6ca;
+    color: #302e2a;
     font-size: 8px;
-    font-weight: 650;
+    font-weight: 800;
     letter-spacing: .13em;
   }
 
@@ -1653,6 +1655,10 @@ h2 {
 
   .equipment-image::after {
     top: 11px;
+    background:
+      linear-gradient(rgba(111, 174, 188, .74), rgba(111, 174, 188, .74)) right 4px top / 1px 28px no-repeat,
+      linear-gradient(rgba(111, 174, 188, .74), rgba(111, 174, 188, .74)) right 4px top / calc(100% - 4px) 1px no-repeat,
+      linear-gradient(rgba(189, 126, 22, .78), rgba(189, 126, 22, .78)) right top / 9px 1px no-repeat;
   }
 
   .module-plate {
@@ -1677,27 +1683,23 @@ h2 {
     top: 11px;
   }
 
-  .module-plate span {
-    width: 5px;
-    height: 5px;
-    flex: 0 0 auto;
-    background: var(--amber-500);
-    border-radius: 50%;
-    box-shadow: 0 0 0 2px rgba(111, 174, 188, .18);
+  .module-plate strong {
+    color: #4f828c;
+    font-size: 8px;
+    font-weight: 750;
+    letter-spacing: .06em;
   }
 
-  .module-plate strong {
+  .module-plate span {
+    color: #aaa39a;
     font-size: 8px;
-    font-weight: 800;
-    letter-spacing: .12em;
+    font-weight: 500;
   }
 
   .module-plate small {
-    padding-left: 6px;
-    color: #8d867d;
-    border-left: 1px solid #ded6ca;
+    color: #302e2a;
     font-size: 7px;
-    font-weight: 650;
+    font-weight: 800;
     letter-spacing: .1em;
   }
 }
