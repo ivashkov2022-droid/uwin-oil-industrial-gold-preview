@@ -393,6 +393,7 @@ h2 {
 }
 
 .machine-note {
+  display: none;
   color: #fff;
   background: rgba(43, 39, 33, .88);
   border-color: rgba(255, 255, 255, .18);
@@ -725,6 +726,7 @@ h2 {
 }
 
 .image-caption {
+  display: none;
   right: 26px;
   bottom: 26px;
   color: var(--ink);
@@ -1516,9 +1518,9 @@ h2 {
     padding: 0;
     overflow: visible;
     background-image: url("assets/equipment/uwin-oil-unit-clean.webp");
-    background-position: 54% center;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto 78%;
     background-origin: border-box;
     background-clip: border-box;
   }
@@ -1594,7 +1596,7 @@ h2 {
     background-image: url("assets/equipment/uwin-oil-unit-clean.webp");
     background-position: 54% center;
     background-repeat: no-repeat;
-    background-size: auto 650px;
+    background-size: auto 590px;
     border: 0;
     border-radius: 0;
     box-shadow: none;
@@ -1674,6 +1676,19 @@ h2 {
   .equipment-image > .module-plate {
     top: 11px;
     left: 11px;
+  }
+
+  .machine-frame img {
+    aspect-ratio: auto;
+    object-fit: contain;
+    object-position: center;
+    transform: scale(1.85);
+    transform-origin: center;
+  }
+
+  .equipment-image img {
+    transform: scale(.88);
+    transform-origin: center;
   }
 
   .module-plate strong {
