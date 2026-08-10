@@ -1515,7 +1515,7 @@ h2 {
   .equipment-image {
     padding: 0;
     overflow: visible;
-    background-image: url("assets/equipment/uwin-oil-unit.webp");
+    background-image: url("assets/equipment/uwin-oil-unit-warm.webp");
     background-position: 54% center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1591,7 +1591,7 @@ h2 {
 
   .machine-frame {
     background-color: #fff;
-    background-image: url("assets/equipment/uwin-oil-unit.webp");
+    background-image: url("assets/equipment/uwin-oil-unit-warm.webp");
     background-position: 54% center;
     background-repeat: no-repeat;
     background-size: auto 650px;
