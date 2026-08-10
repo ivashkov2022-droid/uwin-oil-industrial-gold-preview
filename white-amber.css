@@ -1513,45 +1513,44 @@ h2 {
   }
 
   .equipment-image {
+    padding: 0;
+    overflow: visible;
     background-image: url("assets/equipment/uwin-oil-unit.webp");
     background-position: 54% center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-origin: content-box;
-    background-clip: content-box;
+    background-origin: border-box;
+    background-clip: border-box;
   }
 
   .hero-visual::after,
   .equipment-image::after {
     position: absolute;
     z-index: 5;
-    left: 0;
-    right: 0;
+    box-sizing: border-box;
+    background: none;
+    border-top: 1px solid rgba(101, 125, 128, .52);
+    border-left: 1px solid rgba(101, 125, 128, .52);
     content: "";
     pointer-events: none;
   }
 
   .hero-visual::after {
     top: 13px;
+    right: 13px;
     bottom: 13px;
-    background:
-      linear-gradient(rgba(101, 125, 128, .52), rgba(101, 125, 128, .52)) 6px 0 / 1px 100% no-repeat,
-      linear-gradient(rgba(101, 125, 128, .52), rgba(101, 125, 128, .52)) 6px 0 / calc(100% - 12px) 1px no-repeat;
+    left: 13px;
   }
 
   .equipment-image::after {
-    top: 11px;
-    bottom: 11px;
-    background:
-      linear-gradient(rgba(101, 125, 128, .52), rgba(101, 125, 128, .52)) right 6px top / 1px 100% no-repeat,
-      linear-gradient(rgba(101, 125, 128, .52), rgba(101, 125, 128, .52)) 6px 0 / calc(100% - 12px) 1px no-repeat;
+    inset: 0;
   }
 
   .module-plate {
     position: absolute;
     z-index: 6;
     top: 13px;
-    left: 6px;
+    left: 13px;
     display: flex;
     min-height: 20px;
     align-items: center;
@@ -1566,7 +1565,8 @@ h2 {
   }
 
   .equipment-image > .module-plate {
-    top: 11px;
+    top: 0;
+    left: 0;
   }
 
   .module-plate strong {
@@ -1632,32 +1632,32 @@ h2 {
   .equipment-image::after {
     position: absolute;
     z-index: 5;
-    right: 0;
-    left: 0;
+    box-sizing: border-box;
     height: 28px;
+    background: none;
+    border-top: 1px solid rgba(101, 125, 128, .48);
+    border-left: 1px solid rgba(101, 125, 128, .48);
     content: "";
     pointer-events: none;
   }
 
   .hero-visual::after {
     top: 7px;
-    background:
-      linear-gradient(rgba(101, 125, 128, .48), rgba(101, 125, 128, .48)) 4px 0 / 1px 28px no-repeat,
-      linear-gradient(rgba(101, 125, 128, .48), rgba(101, 125, 128, .48)) 4px 0 / calc(100% - 8px) 1px no-repeat;
+    right: 7px;
+    left: 7px;
   }
 
   .equipment-image::after {
     top: 11px;
-    background:
-      linear-gradient(rgba(101, 125, 128, .48), rgba(101, 125, 128, .48)) right 4px top / 1px 28px no-repeat,
-      linear-gradient(rgba(101, 125, 128, .48), rgba(101, 125, 128, .48)) 4px 0 / calc(100% - 8px) 1px no-repeat;
+    right: 11px;
+    left: 11px;
   }
 
   .module-plate {
     position: absolute;
     z-index: 6;
     top: 7px;
-    left: 4px;
+    left: 7px;
     display: flex;
     min-height: 18px;
     align-items: center;
@@ -1673,6 +1673,7 @@ h2 {
 
   .equipment-image > .module-plate {
     top: 11px;
+    left: 11px;
   }
 
   .module-plate strong {
