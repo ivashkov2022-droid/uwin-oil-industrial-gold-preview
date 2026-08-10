@@ -1512,14 +1512,24 @@ h2 {
     border-radius: 0;
   }
 
+  .equipment-image {
+    background-image: url("assets/equipment/uwin-oil-unit.webp");
+    background-position: 54% center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: content-box;
+    background-clip: content-box;
+  }
+
   .hero-visual::after,
   .equipment-image::after {
     position: absolute;
     z-index: 5;
     left: 0;
-    width: 13px;
+    right: 0;
     background:
       linear-gradient(rgba(111, 174, 188, .82), rgba(111, 174, 188, .82)) 6px 0 / 1px 100% no-repeat,
+      linear-gradient(rgba(111, 174, 188, .82), rgba(111, 174, 188, .82)) 6px 0 / 46% 1px no-repeat,
       linear-gradient(rgba(189, 126, 22, .82), rgba(189, 126, 22, .82)) left top / 13px 1px no-repeat,
       linear-gradient(rgba(189, 126, 22, .82), rgba(189, 126, 22, .82)) left center / 10px 1px no-repeat,
       linear-gradient(rgba(189, 126, 22, .82), rgba(189, 126, 22, .82)) left bottom / 13px 1px no-repeat;
@@ -1535,37 +1545,42 @@ h2 {
   .equipment-image::after {
     top: 11px;
     bottom: 11px;
-    width: 11px;
   }
 
   .hero-visual::before,
   .equipment-image::before {
     position: absolute;
     z-index: 6;
-    top: 50%;
-    left: 1px;
-    padding-block: 7px;
-    color: #5f95a1;
+    top: 13px;
+    left: 34px;
+    padding: 2px 8px;
+    color: #4f828c;
     background: #fff;
     content: "";
-    font-size: 7px;
+    font-size: 9px;
     font-weight: 750;
-    letter-spacing: .13em;
+    letter-spacing: .15em;
     line-height: 1;
     pointer-events: none;
-    transform: translateY(-50%) rotate(180deg);
-    writing-mode: vertical-rl;
+    transform: translateY(-50%);
+    white-space: nowrap;
   }
 
   .hero-visual::before {
-    content: "N₂ / INLINE";
+    content: "N₂ INLINE · FLOW 01";
   }
 
   .equipment-image::before {
-    content: "MODULE / 01";
+    top: 11px;
+    content: "UWIN MODULE · 02";
   }
 
   .machine-frame {
+    background-color: #fff;
+    background-image: url("assets/equipment/uwin-oil-unit.webp");
+    background-position: 54% center;
+    background-repeat: no-repeat;
+    background-size: auto 650px;
     border: 0;
     border-radius: 0;
     box-shadow: none;
@@ -1581,8 +1596,12 @@ h2 {
 
   .machine-frame img,
   .equipment-image img {
+    display: none;
     border-radius: 0;
     outline: 0;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
   }
 }
 
