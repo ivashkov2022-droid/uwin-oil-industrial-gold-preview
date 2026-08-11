@@ -2262,7 +2262,6 @@ h2 {
     min-height: 490px;
     padding: 11px;
     overflow: hidden;
-    box-shadow: inset 0 -1px rgba(197, 132, 24, .18);
   }
 
   .hero-visual::before,
@@ -2293,6 +2292,7 @@ h2 {
   }
 
   .machine-frame {
+    display: contents;
     height: 468px;
     min-height: 468px;
     overflow: hidden;
