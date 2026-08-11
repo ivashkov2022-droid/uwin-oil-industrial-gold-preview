@@ -1106,6 +1106,77 @@ h2 {
   border-color: var(--tech-blue);
 }
 
+.route-icon.has-svg {
+  display: grid;
+  place-items: center;
+}
+
+.route-icon.has-svg::before,
+.route-icon.has-svg::after {
+  display: none;
+}
+
+.route-icon-svg {
+  display: block;
+  width: 56px;
+  height: 56px;
+  overflow: visible;
+}
+
+.route-icon-svg .icon-stroke,
+.route-icon-svg .icon-soft-stroke,
+.route-icon-svg .icon-liquid-line,
+.route-icon-svg .icon-flow-arrow {
+  fill: none;
+  stroke: var(--tech-blue);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.route-icon-svg .icon-soft-stroke {
+  fill: #eef3f4;
+}
+
+.route-icon-svg .icon-fill,
+.route-icon-svg .icon-bottle-fill,
+.route-icon-svg .icon-tank-fill,
+.route-icon-svg .icon-fill-dot,
+.route-icon-svg .icon-flow-dots {
+  fill: var(--amber-400);
+}
+
+.route-icon-svg .icon-fill {
+  opacity: .82;
+}
+
+.route-icon-svg .icon-bottle-fill {
+  opacity: .72;
+}
+
+.route-icon-svg .icon-tank-fill {
+  opacity: .32;
+}
+
+.route-icon-svg .icon-liquid-line {
+  stroke: #fff0c1;
+  stroke-width: 2;
+}
+
+.route-icon-svg .icon-flow-arrow {
+  stroke-width: 2.5;
+}
+
+.route-icon-svg .icon-cap {
+  fill: var(--tech-blue);
+}
+
+.route-icon-svg .icon-wheel {
+  fill: #373027;
+  stroke: #fff;
+  stroke-width: 1.5;
+}
+
 .route h3 {
   font-size: 17px;
 }
