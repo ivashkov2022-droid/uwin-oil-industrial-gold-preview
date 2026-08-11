@@ -461,7 +461,173 @@ h2 {
 }
 
 .bottle-graphic {
-  background: linear-gradient(180deg, #fdf7eb, #f5e2bb);
+  background-color: #f5f8f7;
+  background-image:
+    linear-gradient(rgba(79, 130, 140, .055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(79, 130, 140, .055) 1px, transparent 1px),
+    radial-gradient(circle at 50% 55%, rgba(79, 130, 140, .09), transparent 52%);
+  background-size: 28px 28px, 28px 28px, auto;
+  box-shadow: inset 0 0 0 1px rgba(79, 130, 140, .12);
+}
+
+.bottle-neck {
+  z-index: 5;
+  width: 50px;
+  height: 46px;
+  top: 10px;
+  left: calc(50% - 25px);
+  background: linear-gradient(180deg, rgba(79, 130, 140, .04), rgba(79, 130, 140, .12));
+  border: 2px solid #4f828c;
+  border-bottom: 0;
+  border-radius: 5px 5px 0 0;
+}
+
+.bottle-body {
+  z-index: 4;
+  width: 164px;
+  height: 174px;
+  top: 50px;
+  left: calc(50% - 82px);
+  border: 2px solid #4f828c;
+  border-radius: 28px 28px 34px 34px;
+  box-shadow: inset 0 0 28px rgba(79, 130, 140, .06);
+}
+
+.bottle-atmosphere {
+  position: absolute;
+  z-index: 1;
+  width: 158px;
+  height: 94px;
+  top: 54px;
+  left: calc(50% - 79px);
+  background: linear-gradient(180deg, rgba(79, 130, 140, .035), rgba(79, 130, 140, .18));
+  border-radius: 25px 25px 0 0;
+  animation: bottle-atmosphere-pulse 4.8s ease-in-out infinite;
+}
+
+.bottle-fill {
+  z-index: 2;
+  width: 158px;
+  height: 76px;
+  left: calc(50% - 79px);
+  bottom: 18px;
+  background: linear-gradient(180deg, #e5b94d, #b67818);
+  border-radius: 0 0 32px 32px;
+  box-shadow: inset 0 8px 14px rgba(255, 240, 188, .28);
+}
+
+.bottle-fill::before {
+  position: absolute;
+  top: -3px;
+  right: 0;
+  left: 0;
+  height: 6px;
+  background: rgba(241, 202, 111, .9);
+  border-radius: 50%;
+  content: "";
+}
+
+.bottle-gas-label {
+  position: absolute;
+  z-index: 6;
+  top: 69px;
+  left: 50%;
+  display: grid;
+  justify-items: center;
+  color: #355f67;
+  line-height: 1;
+  transform: translateX(-50%);
+}
+
+.bottle-gas-label strong {
+  font-size: 17px;
+  font-weight: 760;
+  letter-spacing: .08em;
+}
+
+.bottle-gas-label small {
+  margin-top: 5px;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.pack-bubble {
+  position: absolute;
+  z-index: 5;
+  bottom: 91px;
+  width: 7px;
+  height: 7px;
+  background: #f9fcfb;
+  border: 1.5px solid #4f828c;
+  border-radius: 50%;
+  opacity: 0;
+  animation: pack-bubble-rise 3.2s infinite ease-in;
+}
+
+.pb1 { left: calc(50% - 43px); }
+.pb2 { left: calc(50% - 15px); width: 5px; height: 5px; animation-delay: .8s; animation-duration: 2.8s; }
+.pb3 { left: calc(50% + 18px); width: 8px; height: 8px; animation-delay: .35s; animation-duration: 3.6s; }
+.pb4 { left: calc(50% + 42px); width: 5px; height: 5px; animation-delay: 1.35s; animation-duration: 3s; }
+
+.pressure-flow {
+  position: absolute;
+  z-index: 7;
+  top: 118px;
+  width: 44px;
+  height: 1px;
+  background: #4f828c;
+  opacity: .72;
+  animation: pressure-flow-pulse 2.6s ease-in-out infinite;
+}
+
+.pressure-flow::after {
+  position: absolute;
+  top: -3px;
+  width: 7px;
+  height: 7px;
+  border-top: 1.5px solid #4f828c;
+  border-right: 1.5px solid #4f828c;
+  content: "";
+}
+
+.pressure-left {
+  right: calc(50% + 15px);
+  background: linear-gradient(90deg, #4f828c, rgba(79, 130, 140, .18));
+}
+
+.pressure-left::after {
+  left: 0;
+  transform: rotate(-135deg);
+}
+
+.pressure-right {
+  left: calc(50% + 15px);
+  background: linear-gradient(90deg, rgba(79, 130, 140, .18), #4f828c);
+  animation-delay: .25s;
+}
+
+.pressure-right::after {
+  right: 0;
+  transform: rotate(45deg);
+}
+
+@keyframes pack-bubble-rise {
+  0% { opacity: 0; transform: translateY(7px) scale(.65); }
+  18% { opacity: .9; }
+  75% { opacity: .72; }
+  100% { opacity: 0; transform: translateY(-66px) scale(1.05); }
+}
+
+@keyframes bottle-atmosphere-pulse {
+  0%, 100% { opacity: .62; }
+  50% { opacity: 1; }
+}
+
+@keyframes pressure-flow-pulse {
+  0%, 100% { opacity: .38; transform: scaleX(.84); }
+  50% { opacity: .92; transform: scaleX(1); }
 }
 
 .outcome-card h3 {
@@ -1713,6 +1879,17 @@ h2 {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .bottle-atmosphere,
+  .pressure-flow {
+    animation: none;
+  }
+
+  .pack-bubble {
+    opacity: .72;
+    animation: none;
+    transform: translateY(-24px);
+  }
+
   .header-top,
   .site-header,
   .button {
