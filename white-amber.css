@@ -2233,6 +2233,7 @@ h2 {
     min-height: 490px;
     padding: 11px;
     overflow: hidden;
+    box-shadow: inset 0 -1px rgba(197, 132, 24, .18);
   }
 
   .hero-visual::before,
@@ -2249,6 +2250,18 @@ h2 {
     );
     content: "";
     pointer-events: none;
+  }
+
+  .hero-visual::before {
+    background:
+      linear-gradient(180deg, transparent 70%, rgba(201, 143, 47, .05) 84%, rgba(255, 255, 255, .92) 100%),
+      radial-gradient(
+        ellipse at center,
+        transparent 56%,
+        rgba(255, 255, 255, .2) 70%,
+        rgba(255, 255, 255, .82) 90%,
+        #fff 100%
+      );
   }
 
   .hero-visual::after {
