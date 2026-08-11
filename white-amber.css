@@ -1126,7 +1126,7 @@ h2 {
 .route-icon-svg .icon-stroke,
 .route-icon-svg .icon-soft-stroke,
 .route-icon-svg .icon-liquid-line,
-.route-icon-svg .icon-flow-arrow {
+.route-icon-svg .icon-cylinder-seam {
   fill: none;
   stroke: var(--tech-blue);
   stroke-width: 3;
@@ -1141,7 +1141,6 @@ h2 {
 .route-icon-svg .icon-fill,
 .route-icon-svg .icon-bottle-fill,
 .route-icon-svg .icon-tank-fill,
-.route-icon-svg .icon-fill-dot,
 .route-icon-svg .icon-flow-dots {
   fill: var(--amber-400);
 }
@@ -1155,7 +1154,7 @@ h2 {
 }
 
 .route-icon-svg .icon-tank-fill {
-  opacity: .32;
+  opacity: .62;
 }
 
 .route-icon-svg .icon-liquid-line {
@@ -1163,8 +1162,9 @@ h2 {
   stroke-width: 2;
 }
 
-.route-icon-svg .icon-flow-arrow {
-  stroke-width: 2.5;
+.route-icon-svg .icon-cylinder-seam {
+  stroke-width: 2;
+  opacity: .72;
 }
 
 .route-icon-svg .icon-cap {
