@@ -21,7 +21,7 @@
   <link rel="preload" href="assets/equipment/uwin-oil-unit-clean.webp" as="image" type="image/webp">
   <link rel="stylesheet" href="site.css">
   <link rel="stylesheet" href="air.css">
-  <link rel="stylesheet" href="white-amber.css?v=compare-cryo-2">
+  <link rel="stylesheet" href="white-amber.css?v=compare-cryo-3">
 </head>
 <body>
   <a class="skip-link" href="#main">К содержанию</a>
@@ -163,7 +163,19 @@
             <div class="dewar"><span>LN₂</span><small>−196 °C</small></div>
             <div class="cryo-line"></div>
             <div class="dose-head"><i></i></div>
-            <div class="mini-bottle"></div>
+            <div class="mini-bottle">
+              <svg viewBox="0 0 72 101" aria-hidden="true" focusable="false">
+                <defs>
+                  <linearGradient id="mini-oil-gradient" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#e8bc53" />
+                    <stop offset="1" stop-color="#b97819" />
+                  </linearGradient>
+                </defs>
+                <path class="mini-bottle-shell" d="M24 20V3Q24 1 26 1H46Q48 1 48 3V20H54Q68 20 68 34V85Q68 99 54 99H18Q4 99 4 85V34Q4 20 18 20Z" />
+                <path class="mini-bottle-oil" d="M7 62H65V85Q65 96 54 96H18Q7 96 7 85Z" />
+                <path class="mini-bottle-surface" d="M8 62Q36 59 64 62" />
+              </svg>
+            </div>
           </div>
           <div class="versus">VS</div>
           <div class="flow-scheme" data-reveal data-delay="100">
