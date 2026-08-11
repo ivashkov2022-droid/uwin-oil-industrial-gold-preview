@@ -473,7 +473,7 @@ h2 {
 .bottle-neck {
   z-index: 5;
   width: 50px;
-  height: 46px;
+  height: 41px;
   top: 10px;
   left: calc(50% - 25px);
   background: linear-gradient(180deg, rgba(79, 130, 140, .04), rgba(79, 130, 140, .12));
