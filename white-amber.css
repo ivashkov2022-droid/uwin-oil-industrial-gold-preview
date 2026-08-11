@@ -916,6 +916,146 @@ h2 {
   background: var(--amber-400);
 }
 
+/* Mass-transfer diagram: one continuous oil circuit on a shared technical axis. */
+.oil-stream {
+  top: 50%;
+  overflow: visible;
+  isolation: isolate;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.oil-stream::before,
+.oil-stream::after {
+  box-sizing: border-box;
+  width: 22%;
+  height: 78px;
+  top: 50%;
+  background: linear-gradient(
+    180deg,
+    #7b8b94 0,
+    #dbe1e3 8px,
+    #efc861 13px,
+    #b77716 calc(100% - 13px),
+    #dbe1e3 calc(100% - 8px),
+    #7b8b94 100%
+  );
+  border: 0;
+  border-radius: 0;
+  box-shadow: 0 -3px 0 #596b77, 0 3px 0 #596b77;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.oil-stream::before {
+  left: -22%;
+}
+
+.oil-stream::after {
+  right: -22%;
+}
+
+.n2-feed {
+  height: calc(50% - 62px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.n2-feed::before {
+  right: auto;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.oxygen-exit {
+  width: 72px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.oxygen-exit::before {
+  right: auto;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.oxygen-exit i,
+.oxygen-exit i:nth-child(1),
+.oxygen-exit i:nth-child(2),
+.oxygen-exit i:nth-child(3) {
+  width: 28px;
+  left: 50%;
+  margin-left: -14px;
+  text-align: center;
+}
+
+@media (max-width: 620px) {
+  .mass-diagram {
+    display: grid;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    grid-template-rows: auto 1fr auto;
+  }
+
+  .diagram-head {
+    gap: 5px;
+    padding: 14px 8px;
+    font-size: 7px;
+    letter-spacing: .08em;
+  }
+
+  .diagram-chamber {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: auto;
+  }
+
+  .oil-stream {
+    top: 50%;
+  }
+
+  .oil-stream::before,
+  .oil-stream::after {
+    height: 64px;
+  }
+
+  .n2-feed {
+    height: calc(50% - 62px);
+  }
+
+  .n2-feed span {
+    bottom: 4px;
+    padding: 4px;
+    font-size: 10px;
+  }
+
+  .gas-bubbles {
+    top: calc(50% - 88px);
+  }
+
+  .oxygen-exit {
+    height: calc(50% - 82px);
+  }
+
+  .diagram-result {
+    display: grid;
+    align-items: center;
+    padding: 11px 12px;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 7px;
+    font-size: 8px;
+  }
+
+  .diagram-result span:last-child {
+    text-align: right;
+  }
+
+  .diagram-result strong {
+    padding: 6px 9px;
+    font-size: 10px;
+  }
+}
+
 /* Use cases: white grid, amber progress line, restrained blue hardware icons. */
 .lifecycle {
   background: var(--surface);
