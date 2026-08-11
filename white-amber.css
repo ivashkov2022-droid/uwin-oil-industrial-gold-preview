@@ -771,7 +771,7 @@ h2 {
   width: 72px;
   height: 101px;
   right: calc(14% - 4px);
-  bottom: 28px;
+  bottom: 38px;
   overflow: visible;
   background: none;
   border: 0;
@@ -809,11 +809,11 @@ h2 {
 
 @media (max-width: 620px) {
   .cryo-line {
-    top: 40px;
+    top: 35px;
   }
 
   .dose-head {
-    top: 81px;
+    top: 76px;
   }
 
   .dose-head i {
