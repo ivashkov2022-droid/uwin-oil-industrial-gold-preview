@@ -2210,6 +2210,27 @@ h2 {
 
 /* Mobile hero photo mirrors the clean equipment treatment below. */
 @media (max-width: 740px) {
+  .cryo-scheme .scheme-label {
+    top: 14px;
+  }
+
+  .cryo-scheme .dewar,
+  .cryo-scheme .cryo-line,
+  .cryo-scheme .dose-head,
+  .cryo-scheme .mini-bottle {
+    transform: translateY(24px);
+  }
+
+  .flow-scheme .scheme-label {
+    top: 12px;
+  }
+
+  .flow-scheme .flow-module,
+  .flow-scheme .flow-pipe,
+  .flow-scheme .flow-out {
+    transform: translateY(42px);
+  }
+
   .hero-layout::before {
     display: none;
   }
