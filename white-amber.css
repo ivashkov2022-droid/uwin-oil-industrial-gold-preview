@@ -916,6 +916,16 @@ h2 {
   background: var(--amber-400);
 }
 
+.diagram-result {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr auto 1fr;
+}
+
+.diagram-result span:last-child {
+  text-align: right;
+}
+
 /* Mass-transfer diagram: one continuous oil circuit on a shared technical axis. */
 .oil-stream {
   top: 50%;
@@ -993,7 +1003,7 @@ h2 {
   .mass-diagram {
     display: grid;
     width: 100%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 6 / 7;
     grid-template-rows: auto 1fr auto;
   }
 
@@ -1038,16 +1048,9 @@ h2 {
   }
 
   .diagram-result {
-    display: grid;
-    align-items: center;
     padding: 11px 12px;
-    grid-template-columns: 1fr auto 1fr;
     gap: 7px;
     font-size: 8px;
-  }
-
-  .diagram-result span:last-child {
-    text-align: right;
   }
 
   .diagram-result strong {
