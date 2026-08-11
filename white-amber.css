@@ -2214,12 +2214,41 @@ h2 {
     display: none;
   }
 
+  .hero-layout {
+    padding-bottom: 0;
+  }
+
+  .hero-footnote {
+    margin-top: 10px;
+    padding-top: 0;
+  }
+
+  .hero-visual,
+  .equipment-image {
+    background: linear-gradient(180deg, #fff 0%, #fbfaf6 54%, #fff 100%);
+  }
+
   .hero-visual {
     height: 490px;
     min-height: 490px;
     padding: 11px;
     overflow: hidden;
-    background: #fff;
+  }
+
+  .hero-visual::before,
+  .equipment-image::before {
+    position: absolute;
+    z-index: 4;
+    inset: 11px;
+    background: radial-gradient(
+      ellipse at center,
+      transparent 64%,
+      rgba(255, 255, 255, .14) 76%,
+      rgba(255, 255, 255, .72) 91%,
+      #fff 100%
+    );
+    content: "";
+    pointer-events: none;
   }
 
   .hero-visual::after {
