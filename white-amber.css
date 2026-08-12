@@ -1,24 +1,24 @@
 /*
- * UWIN OIL — ivory / matte-gold concept.
- * Visual language: clean editorial ivory, quiet aged-gold accents and a
- * bottom-reveal knowledge footer inspired by the Vorosha interaction model.
+ * UWIN OIL — industrial matte-gold harmony.
+ * Visual language: restrained aged-gold markings, cold gunmetal hardware,
+ * precise technical lines and nearly neutral warm surfaces.
  */
 
 :root {
-  --navy-950: #171612;
-  --navy-900: #24221d;
-  --navy-850: #302d25;
-  --navy-800: #3d382d;
-  --blue-700: #607f82;
-  --cyan-500: #77979a;
-  --cyan-300: #bdcece;
-  --cyan-100: #edf1ef;
+  --navy-950: #151918;
+  --navy-900: #202725;
+  --navy-850: #2c3532;
+  --navy-800: #37413e;
+  --blue-700: #3a595f;
+  --cyan-500: #4b676c;
+  --cyan-300: #aabbbc;
+  --cyan-100: #edf0ed;
   --oil-500: #9a7a3d;
   --oil-200: #ddd0ae;
-  --ink: #1e1d1a;
-  --muted: #68645d;
-  --line: #ddd8ce;
-  --surface: #f8f6f0;
+  --ink: #1c1e1d;
+  --muted: #626662;
+  --line: #d8dad5;
+  --surface: #f5f6f2;
   --white: #ffffff;
   --amber-50: #faf7ef;
   --amber-100: #eee7d5;
@@ -27,8 +27,8 @@
   --amber-500: #8f7139;
   --amber-700: #66502c;
   --amber-900: #30281b;
-  --tech-blue: #698c8f;
-  --shadow: 0 16px 45px rgba(31, 28, 22, .075);
+  --tech-blue: #3a595f;
+  --shadow: 0 16px 45px rgba(24, 30, 29, .075);
   --radius-lg: 12px;
   --radius-md: 8px;
   --radius-sm: 4px;
@@ -42,7 +42,7 @@ html {
 
 body {
   color: var(--ink);
-  background: #f0ede5;
+  background: #eceee9;
   font-family: "Segoe UI", Arial, sans-serif;
 }
 
@@ -68,7 +68,7 @@ h2 {
   margin-bottom: var(--reveal-footer-height);
   overflow: hidden;
   background: #fff;
-  box-shadow: 0 24px 60px rgba(54, 43, 27, .12);
+  box-shadow: 0 24px 60px rgba(26, 32, 31, .12);
 }
 
 .section {
@@ -113,8 +113,8 @@ h2 {
 
 .button-dark {
   color: #fff;
-  background: #211f1a;
-  border-color: #211f1a;
+  background: var(--navy-900);
+  border-color: var(--navy-900);
 }
 
 .button-dark:hover {
@@ -151,7 +151,7 @@ h2 {
   max-height: 38px;
   overflow: hidden;
   color: #d9d4cb;
-  background: #272521;
+  background: #181c1b;
   transition: max-height 220ms ease, opacity 180ms ease;
 }
 
@@ -248,7 +248,7 @@ h2 {
   border-radius: 2px;
 }
 
-/* Hero: mostly white with a controlled amber/blue product field. */
+/* Hero: mostly white with a controlled matte-gold / gunmetal product field. */
 .hero {
   min-height: auto;
   padding: 150px 0 42px;
@@ -284,7 +284,7 @@ h2 {
   bottom: -100px;
   background:
     radial-gradient(circle at 38% 40%, rgba(177, 152, 95, .3), transparent 38%),
-    radial-gradient(circle at 67% 67%, rgba(105, 140, 143, .2), transparent 40%);
+    radial-gradient(circle at 67% 67%, rgba(58, 89, 95, .2), transparent 40%);
   border-radius: 50%;
   content: "";
   filter: blur(3px);
@@ -350,7 +350,7 @@ h2 {
   position: relative;
   z-index: 1;
   padding: 13px;
-  background: linear-gradient(145deg, rgba(221, 208, 174, .72), rgba(105, 140, 143, .24));
+  background: linear-gradient(145deg, rgba(221, 208, 174, .62), rgba(58, 89, 95, .27));
   border-radius: 4px;
 }
 
@@ -362,7 +362,7 @@ h2 {
   background: #fff;
   border: 0;
   border-radius: 2px;
-  box-shadow: 0 20px 55px rgba(55, 43, 27, .13);
+  box-shadow: 0 20px 55px rgba(27, 34, 33, .13);
 }
 
 .machine-frame::after {
@@ -457,17 +457,17 @@ h2 {
 }
 
 .oil-graphic {
-  background: linear-gradient(180deg, #eaf3f4, #d2e3e6);
+  background: linear-gradient(180deg, #eef2f0, #d7e0de);
 }
 
 .bottle-graphic {
-  background-color: #f5f8f7;
+  background-color: #f3f6f4;
   background-image:
-    linear-gradient(rgba(79, 130, 140, .055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(79, 130, 140, .055) 1px, transparent 1px),
-    radial-gradient(circle at 50% 55%, rgba(79, 130, 140, .09), transparent 52%);
+    linear-gradient(rgba(58, 89, 95, .055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(58, 89, 95, .055) 1px, transparent 1px),
+    radial-gradient(circle at 50% 55%, rgba(58, 89, 95, .09), transparent 52%);
   background-size: 28px 28px, 28px 28px, auto;
-  box-shadow: inset 0 0 0 1px rgba(79, 130, 140, .12);
+  box-shadow: inset 0 0 0 1px rgba(58, 89, 95, .12);
 }
 
 .bottle-neck {
@@ -476,8 +476,8 @@ h2 {
   height: 35px;
   top: 16px;
   left: calc(50% - 25.5px);
-  background: linear-gradient(180deg, rgba(79, 130, 140, .04), rgba(79, 130, 140, .12));
-  border: 2px solid #4f828c;
+  background: linear-gradient(180deg, rgba(58, 89, 95, .04), rgba(58, 89, 95, .12));
+  border: 2px solid var(--blue-700);
   border-bottom: 0;
   border-radius: 3px 3px 0 0;
 }
@@ -488,9 +488,9 @@ h2 {
   height: 174px;
   top: 50px;
   left: calc(50% - 82px);
-  border: 2px solid #4f828c;
+  border: 2px solid var(--blue-700);
   border-radius: 28px 28px 34px 34px;
-  box-shadow: inset 0 0 28px rgba(79, 130, 140, .06);
+  box-shadow: inset 0 0 28px rgba(58, 89, 95, .06);
 }
 
 .bottle-atmosphere {
@@ -500,7 +500,7 @@ h2 {
   height: 94px;
   top: 54px;
   left: calc(50% - 79px);
-  background: linear-gradient(180deg, rgba(79, 130, 140, .035), rgba(79, 130, 140, .18));
+  background: linear-gradient(180deg, rgba(58, 89, 95, .035), rgba(58, 89, 95, .18));
   border-radius: 25px 25px 0 0;
   animation: bottle-atmosphere-pulse 4.8s ease-in-out infinite;
 }
@@ -534,7 +534,7 @@ h2 {
   left: 50%;
   display: grid;
   justify-items: center;
-  color: #355f67;
+  color: var(--blue-700);
   line-height: 1;
   transform: translateX(-50%);
 }
@@ -560,7 +560,7 @@ h2 {
   width: 7px;
   height: 7px;
   background: #f9fcfb;
-  border: 1.5px solid #4f828c;
+  border: 1.5px solid var(--blue-700);
   border-radius: 50%;
   opacity: 0;
   animation: pack-bubble-rise 3.2s infinite ease-in;
@@ -577,7 +577,7 @@ h2 {
   top: 118px;
   width: 44px;
   height: 1px;
-  background: #4f828c;
+  background: var(--blue-700);
   opacity: .72;
   animation: pressure-flow-pulse 2.6s ease-in-out infinite;
 }
@@ -587,14 +587,14 @@ h2 {
   top: -3px;
   width: 7px;
   height: 7px;
-  border-top: 1.5px solid #4f828c;
-  border-right: 1.5px solid #4f828c;
+  border-top: 1.5px solid var(--blue-700);
+  border-right: 1.5px solid var(--blue-700);
   content: "";
 }
 
 .pressure-left {
   right: calc(50% + 15px);
-  background: linear-gradient(90deg, #4f828c, rgba(79, 130, 140, .18));
+  background: linear-gradient(90deg, var(--blue-700), rgba(58, 89, 95, .18));
 }
 
 .pressure-left::after {
@@ -604,7 +604,7 @@ h2 {
 
 .pressure-right {
   left: calc(50% + 15px);
-  background: linear-gradient(90deg, rgba(79, 130, 140, .18), #4f828c);
+  background: linear-gradient(90deg, rgba(58, 89, 95, .18), var(--blue-700));
   animation-delay: .25s;
 }
 
@@ -700,7 +700,7 @@ h2 {
 .compare-visuals {
   margin-bottom: 26px;
   background: #fff;
-  border: 1px solid #ebe4d9;
+  border: 1px solid #dfe2dd;
   border-radius: 4px;
   box-shadow: var(--shadow);
 }
@@ -728,8 +728,8 @@ h2 {
   top: 115px;
   right: 14%;
   bottom: auto;
-  background: linear-gradient(180deg, #dce4e7, #8c9ba3);
-  border: 2px solid #71858f;
+  background: linear-gradient(180deg, #dbe1df, #899895);
+  border: 2px solid #667b79;
   border-radius: 4px;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, .62);
   z-index: 3;
@@ -741,7 +741,7 @@ h2 {
   height: 8px;
   bottom: -9px;
   left: calc(50% - 3px);
-  background: #82969f;
+  background: #788b89;
   border-radius: 0 0 2px 2px;
   content: "";
 }
@@ -752,9 +752,9 @@ h2 {
   top: 32px;
   bottom: auto;
   left: calc(50% - 4px);
-  background: #b9e3e7;
+  background: #c2e0df;
   border-radius: 52% 52% 62% 62%;
-  box-shadow: 0 5px 14px rgba(105, 202, 212, .32);
+  box-shadow: 0 5px 14px rgba(75, 103, 108, .30);
   animation: cryo-drop 2.6s ease-in infinite;
   z-index: 4;
 }
@@ -901,15 +901,19 @@ h2 {
 }
 
 .mass-diagram {
-  background: #24221d;
+  background: var(--navy-900);
   border: 10px solid var(--amber-100);
   border-radius: 4px;
-  box-shadow: 0 25px 60px rgba(31, 28, 22, .14);
+  box-shadow: 0 25px 60px rgba(24, 30, 29, .14);
 }
 
 .diagram-head,
 .diagram-result {
-  background: #191814;
+  background: var(--navy-950);
+}
+
+.diagram-chamber {
+  background: radial-gradient(circle at 48% 50%, #344b4e 0%, #182323 62%);
 }
 
 .diagram-result strong {
@@ -1208,7 +1212,7 @@ h2 {
 .equipment-image {
   min-height: 700px;
   padding: 11px;
-  background: linear-gradient(145deg, var(--amber-200), rgba(120, 174, 188, .5));
+  background: linear-gradient(145deg, rgba(221, 208, 174, .72), rgba(75, 103, 108, .42));
   border: 0;
   border-radius: 4px;
   box-shadow: none;
@@ -1266,11 +1270,11 @@ h2 {
   color: var(--amber-700);
 }
 
-/* Economics: an ivory field with amber and a small nitrogen-blue accent. */
+/* Economics: a near-neutral technical field with restrained gold markings. */
 .economics {
   padding: 96px 0 54px;
   color: var(--ink);
-  background: #f4f1e9;
+  background: #f1f3ef;
 }
 
 .economics-grid {
@@ -1504,7 +1508,7 @@ h2 {
   height: var(--reveal-footer-height);
   padding: 0;
   color: #645e55;
-  background: #f8f5ef;
+  background: #f3f4f0;
   border: 0;
 }
 
@@ -1629,7 +1633,7 @@ h2 {
 .footer-base {
   height: 260px;
   color: #bcb4a7;
-  background: #1c1b17;
+  background: #181c1b;
 }
 
 .classic-footer-grid {
@@ -2027,8 +2031,8 @@ h2 {
     z-index: 5;
     box-sizing: border-box;
     background: none;
-    border-top: 1.5px solid rgba(79, 130, 140, .92);
-    border-left: 1.5px solid rgba(79, 130, 140, .92);
+    border-top: 1.5px solid rgba(58, 89, 95, .92);
+    border-left: 1.5px solid rgba(58, 89, 95, .92);
     content: "";
     pointer-events: none;
   }
@@ -2054,7 +2058,7 @@ h2 {
     align-items: center;
     gap: 8px;
     padding: 3px 9px;
-    color: #3f747e;
+    color: var(--blue-700);
     background: #fff;
     line-height: 1;
     pointer-events: none;
@@ -2068,7 +2072,7 @@ h2 {
   }
 
   .module-plate strong {
-    color: #4f828c;
+    color: var(--blue-700);
     font-size: 9px;
     font-weight: 750;
     letter-spacing: .08em;
@@ -2133,8 +2137,8 @@ h2 {
     box-sizing: border-box;
     height: 28px;
     background: none;
-    border-top: 1px solid rgba(79, 130, 140, .86);
-    border-left: 1px solid rgba(79, 130, 140, .86);
+    border-top: 1px solid rgba(58, 89, 95, .86);
+    border-left: 1px solid rgba(58, 89, 95, .86);
     content: "";
     pointer-events: none;
   }
@@ -2161,7 +2165,7 @@ h2 {
     align-items: center;
     gap: 6px;
     padding: 3px 7px;
-    color: #3f747e;
+    color: var(--blue-700);
     background: #fff;
     line-height: 1;
     pointer-events: none;
@@ -2188,7 +2192,7 @@ h2 {
   }
 
   .module-plate strong {
-    color: #4f828c;
+    color: var(--blue-700);
     font-size: 8px;
     font-weight: 750;
     letter-spacing: .06em;
