@@ -1915,9 +1915,18 @@ h2 {
   }
 
   .hero-proof > div {
+    min-height: 80px;
     padding: 14px 0;
     border-right: 0;
     border-bottom: 1px solid #e5ded2;
+    grid-template-columns: 110px minmax(0, 1fr);
+    column-gap: 18px;
+    align-items: center;
+  }
+
+  .hero-proof strong {
+    margin-bottom: 0;
+    line-height: 1.2;
   }
 
   .hero-visual {
