@@ -27,7 +27,7 @@
   --amber-500: #8f7139;
   --amber-700: #66502c;
   --amber-900: #30281b;
-  --brand-gold: #8c8377;
+  --brand-gold: #8f7139;
   --tech-blue: #3a595f;
   --shadow: 0 16px 45px rgba(24, 30, 29, .075);
   --radius-lg: 12px;
@@ -1825,12 +1825,21 @@ h2 {
     height: 42px;
     padding: 9px;
     background: #fff;
-    border: 2px solid var(--brand-gold);
-    border-radius: 4px;
+    border: 1px solid var(--brand-gold);
+    border-radius: 3px;
   }
 
   .menu-toggle span:not(.sr-only) {
+    height: 1px;
     background: var(--ink);
+  }
+
+  .menu-toggle[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .menu-toggle[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
   }
 
   .site-nav {
