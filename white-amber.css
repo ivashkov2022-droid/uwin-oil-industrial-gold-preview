@@ -1756,9 +1756,18 @@ h2 {
 }
 
 .request-form input:focus,
-.request-form textarea:focus {
+.request-form textarea:focus,
+.request-form select:focus {
   border-color: var(--amber-500);
   box-shadow: 0 0 0 3px rgba(189, 126, 22, .12);
+}
+
+.request-form .form-consent input {
+  accent-color: var(--amber-700);
+}
+
+.request-form .form-consent a:hover {
+  color: var(--amber-800);
 }
 
 .form-status {

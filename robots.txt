@@ -1,5 +1,2 @@
 User-agent: *
-Allow: /
-
-Host: uwingroup.ru
-Sitemap: https://uwingroup.ru/sitemap.xml
+Disallow: /
