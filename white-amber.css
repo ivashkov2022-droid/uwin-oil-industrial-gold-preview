@@ -1929,6 +1929,18 @@ h2 {
     line-height: 1.2;
   }
 
+  .statement p strong {
+    display: block;
+    margin-top: 8px;
+    letter-spacing: -.035em;
+    line-height: 1.18;
+  }
+
+  .comparison-table td[data-label="UWIN"] {
+    color: var(--amber-700);
+    font-weight: 670;
+  }
+
   .hero-visual {
     padding: 7px;
   }
