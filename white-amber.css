@@ -1936,9 +1936,15 @@ h2 {
     line-height: 1.18;
   }
 
-  .comparison-table td[data-label="UWIN"] {
+  .comparison-table td[data-label="UWIN"],
+  .comparison-table td[data-label="UWIN"] strong {
     color: var(--amber-700);
-    font-weight: 670;
+    font-weight: 560;
+  }
+
+  .comparison-table .comparison-parity td[data-label="UWIN"] {
+    color: #6f6a63;
+    font-weight: 400;
   }
 
   .hero-visual {
