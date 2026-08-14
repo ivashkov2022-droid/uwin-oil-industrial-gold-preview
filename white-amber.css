@@ -1823,6 +1823,7 @@ h2 {
   .menu-toggle {
     width: 42px;
     height: 42px;
+    justify-items: center;
     padding: 9px;
     background: #fff;
     border: 1px solid var(--brand-gold);
